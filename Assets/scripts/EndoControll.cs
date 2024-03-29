@@ -10,6 +10,7 @@ public class EndoControll : MonoBehaviour
     public GameObject EndoDie;
     public Vector3 Goal;
     public float speed;
+    public int y;
     void Start()
     {
         Goal = SetRandomPosition();
@@ -29,7 +30,7 @@ public class EndoControll : MonoBehaviour
     }
     private Vector3 SetRandomPosition()  // 目的地を生成、xとyのポジションをランダムに値を取得 
     {
-        Vector3 random = new Vector3(Random.Range(-7, 7), 4,0);
+        Vector3 random = new Vector3(Random.Range(-7, 7), y,0);
         return random;
     }
     void OnTriggerEnter2D(Collider2D other)
