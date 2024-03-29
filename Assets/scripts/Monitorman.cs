@@ -19,7 +19,7 @@ public class Monitorman : MonoBehaviour
     {
         number = 1;
         Goal = SetRandomPosition();
-        NumControll(2);
+        InvokeRepeating("UpdateNum", 0f, 1f);
     }
 
     // Update is called once per frame
@@ -60,15 +60,15 @@ public class Monitorman : MonoBehaviour
         Vector3 random = new Vector3(Random.Range(-7, 7), y,0);
         return random;
     }
-    IEnumerator NumControll(int e)
+    void UpdateNum()
     {
-        while (true)
+        if(number == 3)
         {
-            // 2000ミリ秒待つ
-            yield return new WaitForSeconds(2f);
-            if(number == 1){number = 2;}
-            if(number == 2){number = 3;}
-            if(number == 3){number = 1;}
+            number = 1;
+        }
+        else
+        {
+            number++;
         }
     }
 }
