@@ -11,5 +11,9 @@ public class ModeChange : MonoBehaviour
         {
             SceneManager.LoadScene("Title");
         }
+        if(Input.GetKeyDown(KeyCode.M))
+        {
+            SceneManager.LoadScene("MajimeTitle");
+        }
     }
 }
