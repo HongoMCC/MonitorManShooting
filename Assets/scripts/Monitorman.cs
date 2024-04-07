@@ -19,7 +19,7 @@ public class Monitorman : MonoBehaviour
     {
         number = 1;
         Goal = SetRandomPosition();
-        InvokeRepeating("UpdateNum", 0f, 1f);
+        InvokeRepeating("UpdateNum", 0f, 0.1f);
     }
 
     // Update is called once per frame

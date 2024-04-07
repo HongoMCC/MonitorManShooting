@@ -7,11 +7,12 @@ public class MonitorControll : MonoBehaviour
     public GameObject die;
     public GameObject parent;
     public GameObject test;
+    public GameObject bakuhatu;
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "bullet")
         {
-            die.SetActive(true);
+            Instantiate (bakuhatu, transform.position, Quaternion.identity);
             parent.SetActive(false);
             test.SetActive(false);
         }
